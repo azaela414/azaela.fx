@@ -361,6 +361,115 @@ nav .container {
     opacity: 0.8;
 }
 
+/* Pricing Section */
+.pricing {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, var(--bg-color), #000);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.pricing-header h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 4rem 2rem 2rem;
+    position: relative;
+    color: #000;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.price-circle {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background: #0047ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(0, 71, 255, 0.3);
+}
+
+.pricing-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.pricing-card .subtitle {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.price-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.price-features li {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.btn-price {
+    width: 100%;
+    background: #0047ff;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: block;
+}
+
+.btn-price:hover {
+    background: #0036c7;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 { font-size: 3rem; }
@@ -370,4 +479,5 @@ nav .container {
     .nav-links { display: none; }
     .community-card { padding: 3rem 2rem; }
     .community-card h2 { font-size: 2rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
 }
